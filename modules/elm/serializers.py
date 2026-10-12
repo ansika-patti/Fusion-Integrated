@@ -1,7 +1,14 @@
 from rest_framework import serializers
-from modules.placement.models import Application
+from .models import LeaveType, LeaveRequest
 
-class ApplicationSerializer(serializers.ModelSerializer):
+
+class LeaveTypeSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Application
-        fields = '__all__'
+        model = LeaveType
+        fields = "__all__"
+
+
+class LeaveRequestSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = LeaveRequest
+        fields = "__all__"

@@ -1,7 +1,13 @@
 from rest_framework import viewsets
-from modules.elm.serializers import ApplicationSerializer
-from modules.placement.models import Application
+from .models import LeaveType, LeaveRequest
+from .serializers import LeaveTypeSerializer, LeaveRequestSerializer
 
-class ApplicationViewSet(viewsets.ModelViewSet):
-    queryset = Application.objects.all()
-    serializer_class = ApplicationSerializer
+
+class LeaveTypeViewSet(viewsets.ModelViewSet):
+    queryset = LeaveType.objects.all()
+    serializer_class = LeaveTypeSerializer
+
+
+class LeaveRequestViewSet(viewsets.ModelViewSet):
+    queryset = LeaveRequest.objects.all()
+    serializer_class = LeaveRequestSerializer

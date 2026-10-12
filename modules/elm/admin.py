@@ -1,7 +1,5 @@
 from django.contrib import admin
-from modules.elm.models import ELMModel
+from .models import LeaveType, LeaveRequest
 
-class ELMModelAdmin(admin.ModelAdmin):
-    list_display = ('name', 'description')
-
-admin.site.register(ELMModel, ELMModelAdmin)
+admin.site.register(LeaveType)
+admin.site.register(LeaveRequest)
